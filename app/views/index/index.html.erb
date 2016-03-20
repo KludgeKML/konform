@@ -1,7 +1,5 @@
-<%= react_component('TextAreaCounter', { text: 'Hello' }, { prerender: true }) %>
-
-
-
-
-
-<%= react_component('ValidatingField', { }, { prerender: true }) %>
+<%= validating_form_for(Contact) do %>
+	<%= validating_field_for(:name, maxLen: 19) %>
+	<%= validating_field_for(:phone_number) %>
+	<%= validating_field_for(:pan, displayName: 'Credit Card') %>
+<% end %>
