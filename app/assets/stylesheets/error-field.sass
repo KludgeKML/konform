@@ -1,0 +1,15 @@
+.validating-field
+  input
+    width: 200px
+    &:hover
+      border: 1px solid yellow
+    &:focus
+      border: 1px solid orange
+  label
+    font: sans-serif
+    font-size: 12px
+  &.with-errors
+    input
+      color: red
+    label.error-message
+      color: red
